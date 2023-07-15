@@ -1,0 +1,93 @@
+<div id="container">
+
+    <div class="content">
+
+        <!-- <owl-carousel [options]="customOptions" (initialized)="onCarouselInitialized($event)">
+            <ng-container *ngFor="let slide of slides">
+                <div class="item"><img [src]="slide" alt=""></div>
+            </ng-container>
+        </owl-carousel> -->
+
+        <div [@slide]="'in'">
+            
+            <img [src]="images[currentImageIndex]">
+            
+        </div> 
+
+        <div class="custom-dots">
+            <span
+              class="dot"
+              *ngFor="let slide of images; let i = index"
+              [class.active]="currentImageIndex === i"
+              (click)="onDotClick(i)"
+            ></span>
+          </div> 
+        
+         
+
+    </div>
+
+
+      <div class="footer" >
+        <div class ="left" style="align-items: start;">
+            <a (click)="previousImage()"  style="cursor: pointer; color: black;" [hidden]="currentImageIndex === 0" ><i class="fas fa-arrow-circle-left" style="font-size: 36px; padding-left: 7px;" ></i></a>
+
+         </div>
+        <div class="right">
+            <a (click)="nextImage()"  style="cursor: pointer;color: black; " [hidden]="currentImageIndex === 1"><i class="fas fa-arrow-circle-right" style="font-size: 36px; padding-right: 7px;" ></i></a>
+    
+         </div>
+        
+      </div>      
+    
+
+
+
+
+
+</div>
+
+<!-- <div class="footer">
+        <a (click)="previousImage()"  style="cursor: pointer;" ><i class="fas fa-arrow-circle-left" style="font-size: 36px;" ></i></a>
+        <a (click)="nextImage()"  style="cursor: pointer;"><i class="fas fa-arrow-circle-right" style="font-size: 36px;" ></i></a>
+
+     </div> -->
+<!-- <div>
+        <img [src]="images[currentImageIndex]">
+    </div> -->
+<!-- <div class="footer">
+
+
+    </div> -->
+
+<!-- <a  style="cursor: pointer;" ><i class="bi bi-arrow-left-square-fill"></i></a>
+    <a  style="cursor: pointer;"><i class="bi bi-arrow-right-square-fill"></i></a>  -->
+
+
+
+
+
+
+
+
+
+<!-- <button (click)="close()" >Close</button> -->
+
+
+
+
+<!-- <div class="gallery-lightbox-container">
+    <div class="gallery">
+        <div *ngFor="let data of galleryData; let i =index" class="gallery-image">
+            <img [src]="data.imageSrc" >
+
+        </div>
+    </div>
+</div> -->
+
+<!-- <div>      
+    <a (click)="previousImage()"  style="cursor: pointer;" ><i class="fas fa-arrow-circle-left" style="font-size: 36px;" ></i></a>
+</div>
+<div>
+    <a (click)="nextImage()"  style="cursor: pointer;"><i class="fas fa-arrow-circle-right" style="font-size: 36px;" ></i></a>
+</div> -->
